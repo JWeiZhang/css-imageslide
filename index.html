@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Image Play</title>
+    <base href="/">
+</head>
+
+<body>
+    <div class="cover">
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281656.jpg);"></div>
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281655.jpg);"></div>
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281653.jpg);"></div>
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281650.jpg);"></div>
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281649.jpg);"></div>
+        <div class="img" style="background-image: url(https://wallions.com/uploads/post-thumbs/w1920/281656.jpg);"></div>
+    </div>
+</body>
+
+
+
+<style>
+    @keyframes playPic {
+        0%,
+        5% {
+            left: 0;
+        }
+        20%,
+        25% {
+            left: -100%;
+        }
+        40%,
+        45% {
+            left: -200%;
+        }
+        60%,
+        65% {
+            left: -300%;
+        }
+        80%,
+        85% {
+            left: -400%;
+        }
+        100% {
+            left: -500%;
+        }
+    }
+
+    .cover {
+        position: relative;
+        width: 600px;
+        font-size: 0;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .img {
+        display: inline-block;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-size: cover;
+        animation: playPic 20s linear;
+        /* animation-direction: alternate; */
+        animation-iteration-count: infinite;
+    }
+</style>
+
+</html>
